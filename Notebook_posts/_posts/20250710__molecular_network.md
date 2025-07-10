@@ -1,13 +1,13 @@
 # Molecular Networks
 
-In this post, I'll briefly explain a method that helps analyze metabolic compounds, incorporating techniques such as chromatography and mass spectrometry. These analyses provide information aimed at identifying chemical compounds and their composition. This data can be integrated to create large datasets that are used to develop molecular networks. Molecular networking organizes complex MS/MS data by analyzing similar spectra and creates a visual map, where each dot (node) represents a molecule and the edges connect related ones. In this map, the edge label indicates Δm/z, which represents the difference in mass between the two spectra. These mass differences are considered to be **neutral losses**-small neutral or not ionized molecules that were potentially lost during the fragmentation. The analysis of these differences can help identify related compounds, such as derivatives or metabolites, support hypotheses related to chemical modifications, and annotate unknown compounds based on known molecular structures. 
+In this post, I'll briefly explain a method that helps analyze metabolic compounds, incorporating techniques such as chromatography and mass spectrometry. These analyses provide information aimed at identifying chemical compounds and their composition. This data can be integrated to create large datasets that are used to develop molecular networks. Molecular networking organizes complex MS/MS data by analyzing similar spectra and creates a visual map, where each dot (node) represents a molecule and the edges connect related ones. In this map, the edge label indicates Δm/z, representing the mass difference between the two spectra. These mass differences are considered to be **neutral losses**-small neutral or not ionized molecules that were potentially lost during the fragmentation. The analysis of these differences can help identify related compounds, such as derivatives or metabolites, support hypotheses related to chemical modifications, and annotate unknown compounds based on known molecular structures. 
 
 ---
 
 ## Step by step on generating a molecular network:
 
 ### Step 1: Log in to the GNPS dataset
-You log into your account. If you don't have one, create an account using an email address and a password. 
+You log into your account. If you don't have one, create an account using a valid email address and a secure password. 
 
 ### Step 2: Create a Molecular Network
 You can scroll down the main page until you see a menu with several options. Click on 'Create molecular network', placed within the 'Molecular Networking' section.
@@ -28,48 +28,18 @@ You can just navigate through the database and select a cluster of interest. In 
 
 ![Molecular Network Overview](https://github.com/MarthaDuran/Martha_Duran_Notebook/blob/3914e5e786b090ad36c2e254695d57283c0ae34e/Notebook_posts/images/network_overview.png)
 
-**What do the negative numbers mean?**
-In qPCR, lower Ct values represent higher expression of the gene of interest. This formula intends to transform the cycle difference into a biological meaning. A higher fold change represents increased gene expression.
- 
----
+This is the network we are working on today. Each dot represents different compounds in the database, where the blue one corresponds to Etoposide, with a parent mass of 589.191. The other compound we will focus on is the one with a molecular mass of 606.218. The lines represent the existing similarities between them, and the number above the line indicates the Δm/z. In this case, it is 17.027. 
 
-## Example Calculation for the gene *foxA*
+UNIMOD is a publicly available online database for identifying compounds based on their mass spectra. According to it, a mass of 17.026, which is close to the number in our network, corresponds to Ammonium. Since the delta between Etoposide and the unknown compound is positive, we can assume that the new compound may contain Ammonium. 
 
-| Sample             | Tubulin Ct | foxA Ct | ΔCt |
-|--------------------|------------|---------|-----|
-| DMSO Control       | 23.30      | 24.37   | 1.07|
-| Inhibitor Treatment| 22.72      | 23.72   | 1.00|
+ If we look at the peaks,
+ ## Etoposide
+ ![Etoposide]()
 
-ΔΔCt = 1.00 - 1.07 = **-0.07**  
-Fold Change = 2^0.07 ≈ **1.05**
+## Unknown compound
+ ![Unknown compound]()
 
-This means *foxA* was expressed slightly more in the treated sample.
+Both spectra exhibit peaks at 165.046 and 229.046, which support the similarities between these two compounds. Since the unknown compound also contains the main peak, we can assume the unknown compound is a derivative of Etoposide. If we incorporate this information with the delta previously described, this new fragment may have an extra amine group, or this compound may have lost ammonia during the fragmentation. 
 
----
-
-## Results
-
-| Gene  | ΔCt control | ΔCt treated | ΔΔCt | Fold change |
-|------|--------------|--------------|------|-------------|
-| ascs | 5.80         | 5.79         | -0.01| 1.01        |
-| Delta| 2.67         | 2.82         | 0.15 | 0.90        |
-| ets  | 1.42         | 1.72         | 0.30 | 0.81        |
-| foxA | 1.07         | 1.00         | -0.07| 1.05        |
-| gcm  | 5.06         | 5.46         | 0.40 | 0.76        |
-| NGN  | 5.06         | 4.63         | -0.42| 1.34        |
-| opt  | 7.72         | 8.99         | 1.26 | 0.42        |
-| pak3 | 2.11         | 2.58         | 0.47 | 0.72        |
-| pak4 | 2.28         | 2.53         | 0.26 | 0.84        |
-| pitx | 6.38         | 9.01         | 2.62 | 0.16        |
-| SM30 | -2.33        | -0.95        | 1.37 | 0.39        |
-| sm50 | 0.40         | 2.09         | 1.69 | 0.31        |
-| soxC | 1.78         | 1.61         | -0.17| 1.12        |
-| synB | 0.83         | 1.34         | 0.51 | 0.70        |
-
-### Interpretation:
-- The genes that have a fold change < 1 are **downregulated** in the treatment sample, like *pitx*, *sm50*
-- The genes that have a fold change > 1 are **upregulated**, such as *NGN*, *foxA*
-
-
-
-
+## What is Etoposide?
+Etoposide is a chemotherapy agent used to treat different types of cancer by interrupting cell division. 
