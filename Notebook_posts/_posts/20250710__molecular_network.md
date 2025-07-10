@@ -26,7 +26,7 @@ You can just navigate through the database and select a cluster of interest. In 
 
 ### Step 7: Analyzing the network
 
-![Molecular Network Overview]([https://github.com/MarthaDuran/Reserch-Methods/blob/6e75769d00a75d77c99137c7afb2698dba8dac50/Notebook_posts/images/agar_plating_syn_tzipi.png](https://github.com/MarthaDuran/Martha_Duran_Notebook/blob/cec1a4bffcb674b88567b79a5ed914f028cdeeaa/Notebook_posts/images/network_overview.png))
+![Molecular Network Overview](https://github.com/MarthaDuran/Martha_Duran_Notebook/blob/3914e5e786b090ad36c2e254695d57283c0ae34e/Notebook_posts/images/network_overview.png)
 
 **What do the negative numbers mean?**
 In qPCR, lower Ct values represent higher expression of the gene of interest. This formula intends to transform the cycle difference into a biological meaning. A higher fold change represents increased gene expression.
