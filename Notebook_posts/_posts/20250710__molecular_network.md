@@ -37,7 +37,7 @@ UNIMOD is a publicly available online database for identifying compounds based o
  ![Etoposide](https://github.com/MarthaDuran/Martha_Duran_Notebook/blob/8229fd08dda2bf7bef616edb93a6c4026e71e7e8/Notebook_posts/images/etoposide_peaks.png)
 
 ## Unknown compound
- ![Unknown compound]()
+ ![Unknown compound](https://github.com/MarthaDuran/Martha_Duran_Notebook/blob/027ee5dbaa447e44c787d8cba87e1fb07f43e26f/Notebook_posts/images/unkown_compound_ms.png)
 
 Both spectra exhibit peaks at 165.046 and 229.046, which support the similarities between these two compounds. Since the unknown compound also contains the main peak, we can assume the unknown compound is a derivative of Etoposide. If we incorporate this information with the delta previously described, this new fragment may have an extra amine group, or this compound may have lost ammonia during the fragmentation. 
 
