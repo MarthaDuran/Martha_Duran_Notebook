@@ -19,7 +19,7 @@ Create a suitable name for the job analysis. Load your data in the section 'Basi
 Once the files are loaded, enter your email address and click the 'Submit' button. The job will start, and it should take around 30 minutes. 
 
 ### Step 5: Visualize the results
-Once the job is ready, click on the 'View All Clusters With IDs' link in the 'Default Molecular Networking Results Views' section.
+Once the job is ready, click on the 'View All Clusters With IDs' link in the 'Default Molecular Networking Results Views' section. The link of the finalized job is the following: https://gnps.ucsd.edu/ProteoSAFe/status.jsp?task=51a13d84630f4a86a815221d8205e800
 
 ### Step 6: Find a cluster of interests
 You can just navigate through the database and select a cluster of interest. In this case, the 'Etoposide' was selected, belonging to the 2236 cluster. To open the map, click on 'View Network'
