@@ -34,7 +34,7 @@ UNIMOD is a publicly available online database for identifying compounds based o
 
  If we look at the peaks,
  ## Etoposide
- ![Etoposide]()
+ ![Etoposide](https://github.com/MarthaDuran/Martha_Duran_Notebook/blob/8229fd08dda2bf7bef616edb93a6c4026e71e7e8/Notebook_posts/images/etoposide_peaks.png)
 
 ## Unknown compound
  ![Unknown compound]()
